@@ -1,0 +1,8 @@
+# compiled programs
+*.bin
+*.exe
+*.o
+*.obj
+*.pdb
+/source/*/collision
+.DS_Store
