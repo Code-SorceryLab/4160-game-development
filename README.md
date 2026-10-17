@@ -10,6 +10,7 @@ with things to look for and things to try.
 | Folder | Chapter | What it shows |
 |---|---|---|
 | [`source/collision`](source/collision) | 9 - Collision detection (2D) | Stop, bounce, trigger and tunneling, one small scene each |
+| [`source/box2d-start`](source/box2d-start) | 10 - Physics | Crates and balls simulated by Box2D; starting point for Encounter E5 (on Linux, build Box2D once: see its README) |
 
 ## Setup
 
