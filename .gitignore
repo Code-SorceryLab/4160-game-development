@@ -5,4 +5,5 @@
 *.obj
 *.pdb
 /source/*/collision
+/source/*/game-template
 .DS_Store
