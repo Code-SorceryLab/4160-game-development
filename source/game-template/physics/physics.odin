@@ -26,7 +26,8 @@ add_solid_box :: proc(world: b2.WorldId, rect: rl.Rectangle) -> b2.BodyId {
 
 	shape_def := b2.DefaultShapeDef()
 	shape_def.filter.categoryBits = SOLID
-	_ = b2.CreatePolygonShape(body, shape_def, b2.MakeBox(half.x, half.y))
+	box := b2.MakeBox(half.x, half.y)
+	_ = b2.CreatePolygonShape(body, shape_def, &box)
 	return body
 }
 
@@ -44,7 +45,8 @@ add_dynamic_circle :: proc(world: b2.WorldId, at: rl.Vector2, radius: f32, densi
 	shape_def.density = density
 	shape_def.filter.categoryBits = category
 	shape_def.filter.maskBits = collides_with
-	_ = b2.CreateCircleShape(body, shape_def, {radius = radius / config.PIXELS_PER_METRE})
+	circle := b2.Circle{radius = radius / config.PIXELS_PER_METRE}
+	_ = b2.CreateCircleShape(body, shape_def, &circle)
 	return body
 }
 

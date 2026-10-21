@@ -12,10 +12,25 @@ with things to look for and things to try.
 | [`source/collision`](source/collision) | 9 - Collision detection (2D) | Stop, bounce, trigger and tunneling, one small scene each |
 | [`source/box2d-start`](source/box2d-start) | 10 - Physics | Crates and balls simulated by Box2D; starting point for Encounter E4 (on Linux, build Box2D once: see its README) |
 
+## Versions
+
+The samples are tested with:
+
+| Tool | Version | Where it comes from |
+|---|---|---|
+| Odin | `dev-2026-10` | <https://github.com/odin-lang/Odin/releases/tag/dev-2026-10> |
+| raylib | 6.0 | ships with Odin (`vendor:raylib`) |
+| Box2D | 3.1.1 | ships with Odin (`vendor:box2d`) |
+
+Check yours with `odin version`. Odin changes often, and an older or newer
+release can fail to compile these samples. For example, before `dev-2026-07`
+`b2.CreatePolygonShape` took the shape by value, not by pointer. If a sample
+does not compile, check your version first.
+
 ## Setup
 
-1. Install **Odin**: <https://odin-lang.org/docs/install/>. raylib comes with
-   it (`vendor:raylib`), so there is nothing else to install.
+1. Install **Odin** `dev-2026-10`: <https://odin-lang.org/docs/install/>.
+   raylib and Box2D come with it, so there is nothing else to install.
 2. Get the code:
 
    ```sh

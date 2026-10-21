@@ -80,7 +80,8 @@ add_wall :: proc(centre, half: b2.Vec2, angle: f32) {
 	body_def.position = centre
 	body_def.rotation = b2.MakeRot(angle)
 	body := b2.CreateBody(world, body_def)
-	_ = b2.CreatePolygonShape(body, b2.DefaultShapeDef(), b2.MakeBox(half.x, half.y))
+	box := b2.MakeBox(half.x, half.y)
+	_ = b2.CreatePolygonShape(body, b2.DefaultShapeDef(), &box)
 	append(&walls, Wall{centre, half, angle})
 }
 
@@ -104,13 +105,15 @@ dynamic_body :: proc(at: b2.Vec2) -> b2.BodyId {
 
 drop_crate :: proc(at: b2.Vec2) {
 	body := dynamic_body(at)
-	_ = b2.CreatePolygonShape(body, shape_def(), b2.MakeBox(CRATE_HALF, CRATE_HALF))
+	box := b2.MakeBox(CRATE_HALF, CRATE_HALF)
+	_ = b2.CreatePolygonShape(body, shape_def(), &box)
 	append(&things, Thing{body, .Crate})
 }
 
 drop_ball :: proc(at: b2.Vec2) {
 	body := dynamic_body(at)
-	_ = b2.CreateCircleShape(body, shape_def(), {radius = BALL_RADIUS})
+	circle := b2.Circle{radius = BALL_RADIUS}
+	_ = b2.CreateCircleShape(body, shape_def(), &circle)
 	append(&things, Thing{body, .Ball})
 }
 
