@@ -59,8 +59,16 @@ through, but can walk *behind*.
      smaller;
    - its **Tags** contain `solid`.
 2. Click **+** to add a new entity. Name it `Statue`.
-3. **Editor visual → Tile**: pick the tileset `House` and select a statue.
-   There is one with a blue orb at x 48, y 240, 32 x 32.
+3. Give the statue its picture:
+   - Set **Editor visual** to *Tile*. A tile picker appears below it.
+   - In the picker, choose the tileset `House`. Its whole image opens
+     (`TilesetHouse.png`: walls, roofs, doors, statues, ...).
+   - Find the row of sandstone statues, about two-thirds of the way down the
+     image, just below the doors. Pick the small statue holding a
+     **blue orb** (the third object from the left).
+   - It is 2 x 2 tiles, so **click and drag** across all four tiles. A single
+     click only grabs one 16 x 16 tile, a quarter of the statue.
+   - (Exact spot, if you need it: x 48, y 240, size 32 x 32 pixels.)
 4. Set **Tile render mode** to *Full size (uncropped)* and the **pivot** to
    bottom-centre.
 5. Set the **size** to the statue's *base*, the part that should block the
