@@ -1,4 +1,4 @@
-# bug-hunt — Side Quest SQ5 (5 pts): a QA pass
+# bug-hunt — Side Quest SQ4 (5 pts): a QA pass
 
 CSCI 4160U - Game Development · Stage 9, Chapter 18 · started in class Mon Nov 16 ·
 **due Sun Nov 22, 23:59**

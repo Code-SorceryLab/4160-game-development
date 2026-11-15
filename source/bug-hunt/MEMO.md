@@ -1,4 +1,4 @@
-# SQ5 memo — bug hunt
+# SQ4 memo — bug hunt
 
 Half a page to one page in total, in your own words. Use your own bugs and
 tests as examples.
