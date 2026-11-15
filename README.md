@@ -12,6 +12,7 @@ with things to look for and things to try.
 | [`source/collision`](source/collision) | 9 - Collision detection (2D) | Stop, bounce, trigger and tunneling, one small scene each |
 | [`source/box2d-start`](source/box2d-start) | 10 - Physics | Crates and balls simulated by Box2D; starting point for Encounter E4 (on Linux, build Box2D once: see its README) |
 | [`source/map-gen`](source/map-gen) | 15 - Procedural content generation | A seeded cave generator with a reachability check; starting point for Side Quest SQ4 |
+| [`source/bug-hunt`](source/bug-hunt) | 18 - Game testing II: quality assurance | A small game with a design document and planted bugs; starting point for Side Quest SQ5 |
 
 ## Versions
 
